@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajan Qerimi - Futbollist Profesionist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+     /* Modern HNK Gorica CSS - Red & White Theme */
+:root {
+    /* Color Palette - HNK Gorica Red & White */
+    --primary-red: #D00000;
+    --dark-red: #9D0208;
+    --vibrant-red: #FF2A2A;
+    --light-red: #FF6B6B;
+    --surface-red: #FFF5F5;
+    --white: #FFFFFF;
+    --off-white: #F8F9FA;
+    --dark-gray: #1A1A1A;
+    --medium-gray: #4A4A4A;
+    --light-gray: #E0E0E0;
+    
+    /* Glassmorphism Effects */
+    --glass-white: rgba(255, 255, 255, 0.85);
+    --glass-red: rgba(208, 0, 0, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    /* Modern Shadows */
+    --shadow-sm: 0 4px 12px rgba(208, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(208, 0, 0, 0.12);
+    --shadow-lg: 0 20px 40px rgba(208, 0, 0, 0.15);
+    --shadow-glow: 0 0 30px rgba(255, 42, 42, 0.5);
+    --shadow-neon: 0 0 15px rgba(255, 106, 106, 0.7);
+    
+    /* Advanced Animation Curves */
+    --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    --ease-power: cubic-bezier(0.77, 0, 0.18, 1);
+    
+    /* Modern Gradients */
+    --gradient-red: linear-gradient(135deg, var(--primary-red) 0%, var(--vibrant-red) 100%);
+    --gradient-red-white: linear-gradient(135deg, var(--primary-red) 0%, var(--white) 100%);
+    --gradient-diagonal: linear-gradient(45deg, var(--primary-red) 0%, var(--dark-red) 50%, var(--primary-red) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+/* CSS Reset & Base Styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-gray);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Performance Optimizations */
+section {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Modern Container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Advanced Header with Glassmorphism & Parallax --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-white);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: all 0.4s var(--ease-smooth);
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(208, 0, 0, 0.1);
+    padding: 8px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: padding 0.3s var(--ease-smooth);
+}
+
+/* Logo with Animation */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-red);
+    transition: left 0.6s var(--ease-smooth);
+}
+
+.logo:hover::before {
+    left: 0;
+}
+
+.logo-icon {
+    font-size: 32px;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(208, 0, 0, 0.3));
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Modern Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding: 8px 0;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-red);
+    transition: width 0.4s var(--ease-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+/* Animated Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-red);
+    border-radius: 3px;
+    transition: all 0.4s var(--ease-smooth);
+    transform-origin: left center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* --- Hero Section with Parallax & 3D Effects --- */
+.hero {
+    position: relative;
+    padding: 220px 0 150px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--surface-red) 0%, var(--white) 100%);
+}
+
+/* Animated Background Elements */
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero::before {
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--light-red) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.2;
+    filter: blur(80px);
+    animation: floatBlob 20s infinite alternate ease-in-out;
+}
+
+.hero::after {
+    bottom: -150px;
+    left: -150px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, var(--primary-red) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.1;
+    filter: blur(100px);
+    animation: floatBlob 25s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    33% { transform: translate(50px, -50px) scale(1.1) rotate(120deg); }
+    66% { transform: translate(-30px, 30px) scale(0.9) rotate(240deg); }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.player-info h2 {
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    animation: slideUp 1s var(--ease-smooth) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.player-info h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    color: var(--dark-red);
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: slideUp 1s 0.2s var(--ease-smooth) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.player-info p {
+    font-size: 1.2rem;
+    color: var(--medium-gray);
+    margin-bottom: 40px;
+    max-width: 90%;
+    animation: slideUp 1s 0.4s var(--ease-smooth) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Player Image */
+.player-image {
+    position: relative;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.main-player-img {
+    width: 100%;
+    border-radius: 24px;
+    transform: rotateY(-10deg) rotateX(5deg);
+    box-shadow: 
+        40px 40px 80px rgba(208, 0, 0, 0.2),
+        -20px -20px 40px rgba(255, 255, 255, 0.8);
+    transition: transform 0.8s var(--ease-smooth), box-shadow 0.8s var(--ease-smooth);
+    z-index: 2;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    animation: floatImage 6s infinite alternate ease-in-out;
+}
+
+@keyframes floatImage {
+    0% { transform: rotateY(-10deg) rotateX(5deg) translateY(0); }
+    100% { transform: rotateY(-10deg) rotateX(5deg) translateY(-20px); }
+}
+
+.player-image:hover .main-player-img {
+    transform: rotateY(0) rotateX(0) scale(1.05);
+    box-shadow: 
+        0 60px 120px rgba(208, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Animated Soccer Balls */
+.soccer-ball {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #f0f0f0);
+    box-shadow: 
+        inset -8px -8px 20px rgba(0,0,0,0.1),
+        15px 15px 30px rgba(0,0,0,0.15),
+        0 0 20px rgba(255, 42, 42, 0.3);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: floatBall 8s infinite ease-in-out;
+}
+
+.soccer-ball::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,42,42,0.1), transparent 70%);
+}
+
+.soccer-ball::after {
+    content: '⚽';
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    filter: grayscale(0.3);
+    transform: rotate(15deg);
+}
+
+.ball-1 {
+    width: 90px;
+    height: 90px;
+    top: -40px;
+    right: -40px;
+    font-size: 45px;
+    animation-delay: 0s;
+}
+
+.ball-2 {
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    left: -30px;
+    font-size: 30px;
+    animation-delay: 1s;
+}
+
+.ball-3 {
+    width: 40px;
+    height: 40px;
+    bottom: 120px;
+    right: 30%;
+    font-size: 20px;
+    animation-delay: 2s;
+}
+
+@keyframes floatBall {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    33% { 
+        transform: translateY(-40px) rotate(120deg) scale(1.1);
+    }
+    66% { 
+        transform: translateY(20px) rotate(240deg) scale(0.9);
+    }
+}
+
+/* --- Modern Stats Section with Bento Grid --- */
+.stats {
+    padding: 140px 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255,42,42,0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(208,0,0,0.03) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--dark-red);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Animated Underline */
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-red);
+    border-radius: 2px;
+    animation: underlinePulse 2s infinite alternate;
+}
+
+@keyframes underlinePulse {
+    0% { width: 100px; opacity: 0.7; }
+    100% { width: 150px; opacity: 1; }
+}
+
+/* Modern Season Selector */
+.season-selector {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 60px;
+    background: var(--glass-white);
+    padding: 8px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+.season-btn {
+    padding: 12px 28px;
+    border: none;
+    background: transparent;
+    border-radius: 50px;
+    color: var(--medium-gray);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.season-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-red);
+    transition: left 0.4s var(--ease-smooth);
+    z-index: -1;
+}
+
+.season-btn.active, .season-btn:hover {
+    color: var(--white);
+}
+
+.season-btn.active::before, .season-btn:hover::before {
+    left: 0;
+}
+
+/* Advanced Stats Cards */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card {
+    background: var(--glass-white);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.5s var(--ease-elastic);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s var(--ease-smooth);
+}
+
+.stat-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--vibrant-red);
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card i {
+    font-size: 40px;
+    margin-bottom: 24px;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: iconFloat 3s infinite alternate ease-in-out;
+}
+
+@keyframes iconFloat {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.stat-value {
+    font-size: 56px;
+    font-weight: 900;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 5px 15px rgba(208, 0, 0, 0.2);
+}
+
+.stat-bar {
+    height: 8px;
+    background: rgba(208, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-fill {
+    height: 100%;
+    background: var(--gradient-red);
+    width: 0;
+    border-radius: 10px;
+    position: relative;
+    animation: fillBar 1.5s 0.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+    to { width: var(--target-width, 100%); }
+}
+
+/* --- Modern Transfers Timeline --- */
+.transfers {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--surface-red) 0%, var(--white) 100%);
+    border-radius: 40px;
+    margin: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 80px auto;
+}
+
+/* Animated Timeline Line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        var(--primary-red) 20%, 
+        var(--primary-red) 80%, 
+        transparent 100%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    animation: lineGlow 3s infinite alternate;
+}
+
+@keyframes lineGlow {
+    0% { box-shadow: 0 0 10px rgba(208, 0, 0, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 42, 42, 0.8); }
+}
+
+.timeline-item {
+    padding: 20px 50px;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    animation: revealItem 0.8s forwards;
+}
+
+.timeline-item:nth-child(odd) { 
+    animation-delay: 0.1s; 
+    left: 0; 
+    text-align: right; 
+}
+
+.timeline-item:nth-child(even) { 
+    animation-delay: 0.3s; 
+    left: 50%; 
+    text-align: left; 
+}
+
+@keyframes revealItem {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.9); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+/* Modern Timeline Dot */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border: 4px solid var(--primary-red);
+    border-radius: 50%;
+    top: 24px;
+    z-index: 2;
+    box-shadow: 
+        0 0 0 4px rgba(208, 0, 0, 0.2),
+        0 0 20px rgba(255, 42, 42, 0.5);
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(208, 0, 0, 0.2), 0 0 20px rgba(255, 42, 42, 0.5); }
+    50% { box-shadow: 0 0 0 8px rgba(208, 0, 0, 0.1), 0 0 30px rgba(255, 42, 42, 0.7); }
+}
+
+.timeline-item:nth-child(odd)::after { right: -12px; }
+.timeline-item:nth-child(even)::after { left: -12px; }
+
+.timeline-content {
+    background: var(--glass-white);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s var(--ease-smooth);
+    border: 1px solid transparent;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-glass);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-red);
+    box-shadow: var(--shadow-glow);
+}
+
+.timeline-content:hover::before {
+    opacity: 1;
+}
+
+.timeline-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    filter: brightness(0.9);
+    transition: filter 0.4s;
+}
+
+.timeline-content:hover .timeline-img {
+    filter: brightness(1);
+}
+
+/* --- Modern Gallery with Interactive Effects --- */
+.gallery {
+    padding: 140px 0;
+    background: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 320px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-smooth), filter 0.5s;
+    transform-origin: center center;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.15) rotate(2deg);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Advanced Overlay */
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg, 
+        rgba(208, 0, 0, 0.8) 0%, 
+        rgba(255, 42, 42, 0.6) 50%, 
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-smooth);
+    z-index: 1;
+}
+
+.gallery-item::after {
+    content: '🔍 View';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s var(--ease-smooth);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 24px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* --- Modern Footer --- */
+footer {
+    background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+    color: var(--white);
+    padding: 100px 0 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Elements */
+footer::before, footer::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+footer::before {
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 40s linear infinite;
+}
+
+footer::after {
+    bottom: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,106,106,0.2) 0%, transparent 70%);
+    animation: rotate 30s linear infinite reverse;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--white);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+}
+
+/* Modern Social Links */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 22px;
+    transition: all 0.4s var(--ease-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    transition: left 0.4s var(--ease-smooth);
+    z-index: -1;
+}
+
+.social-links a:hover {
+    color: var(--primary-red);
+    border-color: var(--white);
+    transform: translateY(-8px) rotate(10deg);
+}
+
+.social-links a:hover::before {
+    left: 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--vibrant-red));
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 1001;
+    transition: transform 0.1s;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s var(--ease-bounce);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-content {
+        gap: 60px;
+    }
+    
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
+    }
+    
+    .player-info p {
+        max-width: 100%;
+    }
+    
+    .player-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .timeline::after {
+        left: 40px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 20px;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item::after {
+        left: 31px;
+    }
+    
+    .timeline-item:nth-child(odd)::after {
+        left: 31px;
+    }
+    
+    .transfers {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(30px);
+        width: 300px;
+        height: 100vh;
+        padding: 100px 40px 40px;
+        gap: 25px;
+        box-shadow: -10px 0 50px rgba(0, 0, 0, 0.15);
+        transition: 0.5s var(--ease-power);
+        border-radius: 0;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .hero {
+        padding: 160px 0 80px;
+    }
+    
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats, .gallery {
+        padding: 80px 0;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero::before, .hero::after {
+        display: none;
+    }
+    
+    .player-info h2 {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+    
+    .soccer-ball {
+        display: none;
+    }
+    
+    .transfers {
+        margin: 10px;
+        padding: 60px 0;
+    }
+    
+    .season-selector {
+        flex-wrap: wrap;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+}
+         
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-futbol"></i>
+                    <h1>Ajan Qerimi</h1>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Kreu</a></li>
+                    <li><a href="#stats">Statistikat</a></li>
+                    <li><a href="#transfers">Transferimet</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="player-info">
+                    <h2>Ajan Qerimi</h2>
+                    <h3>Sulmues - HNK Gorica</h3>
+                    <p>Talenti nga Kosova, i specializuar në pozicionin e sulmuesit. Me talent të jashtëzakonshëm dhe mbresa goli të shumta, Ajani është një nga lojtarët më premtues të brezit të ri.</p>
+                    </a>
+                    <div class="soccer-ball ball-1"></div>
+                    <div class="soccer-ball ball-2"></div>
+                    <div class="soccer-ball ball-3"></div>
+                </div>
+                <div class="player-image">
+                    <img src="5.jpg" alt="Ajan Qerimi" class="main-player-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Statistikat e Sezonit</h2>
+            </div>
+            
+            <div class="season-selector">
+                <button class="season-btn active" data-season="2025-2026">2025/2026</button>
+            
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Ndeshjet</h3>
+                    <div class="stat-value" id="matches">13</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill matches-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Golat</h3>
+                    <div class="stat-value" id="goals">16</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill goals-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-assistive-listening-systems"></i>
+                    <h3>Asistimet</h3>
+                    <div class="stat-value" id="assists">8</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill assists-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Vlerësimi</h3>
+                    <div class="stat-value" id="rating">9.8</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill rating-fill" style="width: 78%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Transfers Section -->
+    <section class="transfers" id="transfers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Historia e Transferimeve</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>NK Gradici</h3>
+                        <p>2024 - 2025</p>
+                        <p>TPerformancë e shkëlqyer me 16 gola në 13 ndeshje.</p>
+                        <img src="grad.jpg" alt="NK Gradici" class="timeline-img">
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>HNK Gorica</h3>
+                        <p>2025 - Aktualisht</p>
+                        <p>Lojtari me i miri ne kete klub dhe lig</p>
+                        <img src="Gorica.jpg" alt="HNK Gorica" class="timeline-img">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria Fotografike</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.jpg" alt="Ajan Qerimi 1" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpg" alt="Ajan Qerimi 2" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpg" alt="Ajan Qerimi 3" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpg" alt="Ajan Qerimi 4" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="5.jpg" alt="Ajan Qerimi 5" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="6.jpg" alt="Ajan Qerimi 6" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="7.jpg" alt="Ajan Qerimi 7" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="8.jpg" alt="Ajan Qerimi 8" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="9.jpg" alt="Ajan Qerimi 9" class="gallery-img">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> info@ajanqerimi.com</p>
+                    <p><i class="fas fa-phone"></i> +383 44 543 506</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Gjilan, Kosovë</p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@ajanqerimi17"><i class="fab fa-tiktok"></i></a>
+                       
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Karriera</h3>
+                    <p>Pozicioni: Sulmues</p>
+                    <p>Klubi aktual: HNK Gorica</p>
+                    <p>Numri: 17</p>
+                    <p>Gjinia: Mashkull</p>
+                    <p>Data e lindjes: 29 Maj 2017</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Klubi</h3>
+                    <p>HNK Gorica</p>
+                    <p>Stadiumi: Gradski stadion Velika Gorica</p>
+                    <p>Kapaciteti: 8,000</p>
+                    <p>Vendi: Kroaci</p>
+                    <p>Liga: Prva HNL</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 2024 2025 2026 Ajan Qerimi. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Season selector functionality
+        const seasonBtns = document.querySelectorAll('.season-btn');
+        const statValues = {
+            '2025-2026': { matches: 13, goals: 16, assists: 8, rating: 7.8 },
+            '2024-2025': { matches: 32, goals: 24, assists: 12, rating: 7.5 },
+            '2023-2024': { matches: 28, goals: 18, assists: 10, rating: 7.2 }
+        };
+        
+        seasonBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                seasonBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Get the season data
+                const season = btn.getAttribute('data-season');
+                const stats = statValues[season];
+                
+                // Update stat values with animation
+                animateValue('matches', stats.matches);
+                animateValue('goals', stats.goals);
+                animateValue('assists', stats.assists);
+                animateValue('rating', stats.rating);
+                
+                // Update stat bars
+                updateStatBars(stats);
+            });
+        });
+        
+        // Function to animate value changes
+        function animateValue(elementId, finalValue) {
+            const element = document.getElementById(elementId);
+            const currentValue = parseInt(element.textContent) || parseFloat(element.textContent);
+            const duration = 1000; // 1 second
+            const step = (finalValue - currentValue) / (duration / 16); // 60fps
+            let current = currentValue;
+            let startTime = null;
+            
+            function updateValue(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                
+                current = currentValue + (step * (progress / 16));
+                
+                // Check if we've reached or passed the final value
+                if ((step > 0 && current >= finalValue) || (step < 0 && current <= finalValue)) {
+                    element.textContent = finalValue;
+                    return;
+                }
+                
+                // Update the element with the current value
+                if (elementId === 'rating') {
+                    element.textContent = current.toFixed(1);
+                } else {
+                    element.textContent = Math.round(current);
+                }
+                
+                // Continue the animation
+                requestAnimationFrame(updateValue);
+            }
+            
+            requestAnimationFrame(updateValue);
+        }
+        
+        // Function to update stat bars
+        function updateStatBars(stats) {
+            // Calculate percentages for the bars
+            const matchesPercent = (stats.matches / 50) * 100;
+            const goalsPercent = (stats.goals / 40) * 100;
+            const assistsPercent = (stats.assists / 20) * 100;
+            const ratingPercent = (stats.rating / 10) * 100;
+            
+            // Update the width of each bar
+            document.querySelector('.matches-fill').style.width = `${matchesPercent}%`;
+            document.querySelector('.goals-fill').style.width = `${goalsPercent}%`;
+            document.querySelector('.assists-fill').style.width = `${assistsPercent}%`;
+            document.querySelector('.rating-fill').style.width = `${ratingPercent}%`;
+        }
+        
+      
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize stat bars on page load
+        window.addEventListener('load', () => {
+            updateStatBars(statValues['2025-2026']);
+            
+
+    </script>
+</body>
+</html>
